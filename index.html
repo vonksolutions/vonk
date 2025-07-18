@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vonk Systems | Veilige lokale AI voor gemeenten</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00BAB5',
+                        secondary: '#072132',
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #072132 0%, #00BAB5 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #00BAB5;
+            transition: width .3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .active-nav::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-secondary">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="#00BAB5"/>
+                    <path d="M25.5 15.5C25.5 18.2614 23.2614 20.5 20.5 20.5C17.7386 20.5 15.5 18.2614 15.5 15.5C15.5 12.7386 17.7386 10.5 20.5 10.5C23.2614 10.5 25.5 12.7386 25.5 15.5Z" fill="white"/>
+                    <path d="M29.5 24.5C29.5 27.2614 27.2614 29.5 24.5 29.5C21.7386 29.5 19.5 27.2614 19.5 24.5C19.5 21.7386 21.7386 19.5 24.5 19.5C27.2614 19.5 29.5 21.7386 29.5 24.5Z" fill="white"/>
+                    <path d="M15.5 24.5C15.5 27.2614 13.2614 29.5 10.5 29.5C7.73858 29.5 5.5 27.2614 5.5 24.5C5.5 21.7386 7.73858 19.5 10.5 19.5C13.2614 19.5 15.5 21.7386 15.5 24.5Z" fill="white"/>
+                </svg>
+                <span class="ml-3 text-xl font-bold">Vonk Systems</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link active-nav text-sm font-medium">Home</a>
+                <a href="#solutions" class="nav-link text-sm font-medium">Oplossingen</a>
+                <a href="#privacy" class="nav-link text-sm font-medium">Privacy & Beveiliging</a>
+                <a href="#about" class="nav-link text-sm font-medium">Over Ons</a>
+                <a href="#contact" class="nav-link text-sm font-medium">Contact</a>
+            </nav>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white w-full py-2 px-4 shadow-md" id="mobile-menu">
+            <a href="#home" class="block py-2 font-medium">Home</a>
+            <a href="#solutions" class="block py-2 font-medium">Oplossingen</a>
+            <a href="#privacy" class="block py-2 font-medium">Privacy & Beveiliging</a>
+            <a href="#about" class="block py-2 font-medium">Over Ons</a>
+            <a href="#contact" class="block py-2 font-medium">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 md:py-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Veilige lokale AI voor gemeenten</h1>
+                <p class="text-xl mb-8">AI-oplossingen die voldoen aan de hoogste standaarden voor privacy, beveiliging en transparantie. Volledig lokaal, zonder afhankelijkheid van externe clouddiensten.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#solutions" class="bg-white text-primary font-medium py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300">Onze oplossingen</a>
+                    <a href="#contact" class="border-2 border-white text-white font-medium py-3 px-6 rounded-lg hover:bg-white hover:bg-opacity-10 transition duration-300">Neem contact op</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Waarom kiezen voor Vonk Systems?</h2>
+                <p class="max-w-2xl mx-auto text-lg">Onze AI-oplossingen zijn speciaal ontwikkeld voor de Nederlandse publieke sector, met volledige naleving van AVG/GDPR.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="feature-card bg-gray-50 p-8 rounded-lg transition duration-300">
+                    <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Data blijft lokaal</h3>
+                    <p class="text-gray-600">Alle gegevens blijven binnen uw eigen infrastructuur. Geen dataverplaatsing naar externe servers.</p>
+                </div>
+                <div class="feature-card bg-gray-50 p-8 rounded-lg transition duration-300">
+                    <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">End-to-end encryptie</h3>
+                    <p class="text-gray-600">Alle communicatie en dataopslag is versleuteld volgens de hoogste beveiligingsstandaarden.</p>
+                </div>
+                <div class="feature-card bg-gray-50 p-8 rounded-lg transition duration-300">
+                    <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.494l-.318.158a6 6 0 01-3.86.494L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Uitlegbare modellen</h3>
+                    <p class="text-gray-600">Transparante AI die uitlegbaar is en voldoet aan de eisen voor verantwoorde algoritmes.</p>
+                </div>
+                <div class="feature-card bg-gray-50 p-8 rounded-lg transition duration-300">
+                    <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AVG/GDPR compliant</h3>
+                    <p class="text-gray-600">Volledige naleving van Nederlandse en Europese privacywetgeving, inclusief DPIA ondersteuning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Onze oplossingen</h2>
+                <p class="max-w-2xl mx-auto text-lg">Speciaal ontwikkeld voor de behoeften van gemeenten en publieke organisaties.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Lokale LLM Sandbox</h3>
+                    <p class="mb-4">Een veilige omgeving voor het experimenteren met taalmodellen zonder risico's voor privacy of data-lekage.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Volledig geïsoleerd van internet</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Fine-tunable met eigen documenten</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Bronvermelding voor alle antwoorden</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center text-primary font-medium hover:text-secondary transition duration-300">
+                        Meer informatie
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Document Classificatie</h3>
+                    <p class="mb-4">Automatische verwerking en categorisering van binnenkomende documenten en e-mails.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Herkenning van gevoelige documenten</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Automatische doorgeleiding naar juiste afdeling</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Integratie met bestaande systemen</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center text-primary font-medium hover:text-secondary transition duration-300">
+                        Meer informatie
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Case Triage</h3>
+                    <p class="mb-4">Slimme prioritering en routing van binnenkomende aanvragen en meldingen.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Voorspelling van complexiteit en doorlooptijd</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Automatische herkenning van urgente zaken</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Suggesties voor vergelijkbare eerdere cases</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center text-primary font-medium hover:text-secondary transition duration-300">
+                        Meer informatie
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Beveiligde Chatbot</h3>
+                    <p class="mb-4">Een veilige assistent voor burgers en medewerkers zonder privacyrisico's.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Geen opslag van persoonlijke gegevens</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Trainbaar met eigen beleidsdocumenten</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-primary mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Optionele anonieme logging voor verbetering</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center text-primary font-medium hover:text-secondary transition duration-300">
+                        Meer informatie
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy & Security Section -->
+    <section id="privacy" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Privacy & Beveiliging</h2>
+                    <p class="text-lg">Onze toewijding aan databescherming en transparantie</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-8 mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Onze beveiligingsaanpak</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold mb-2">End-to-end encryptie</h4>
+                            <p class="text-gray-600">Alle gegevens worden versleuteld, zowel in transit als at rest. We gebruiken alleen sterke, goedgekeurde encryptie-algoritmes.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Zero-trust architectuur</h4>
+                            <p class="text-gray-600">Onze systemen zijn ontworpen volgens zero-trust principes, met strikte toegangscontroles en minimale rechten.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Regelmatige audits</h4>
+                            <p class="text-gray-600">Onze beveiliging wordt jaarlijks geaudit door onafhankelijke partijen, inclusief penetratietests en code reviews.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-8">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">AVG/GDPR Compliance</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold mb-2">Data-soevereiniteit</h4>
+                            <p class="text-gray-600">Alle verwerking vindt plaats binnen de EU, met opties voor volledig lokale implementatie binnen uw eigen datacenter.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Privacy by Design</h4>
+                            <p class="text-gray-600">Privacy is ingebouwd in al onze producten vanaf het eerste ontwerp, inclusief standaard pseudonimisering.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">DPIA ondersteuning</h4>
+                            <p class="text-gray-600">We bieden uitgebreide documentatie en ondersteuning voor uw Data Protection Impact Assessments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Over Vonk Systems</h2>
+                    <p class="text-lg">Onze missie is om publieke organisaties te helpen bij het veilig en verantwoord benutten van AI</p>
+                </div>
+                <div class="bg-white rounded-lg p-8 mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">Onze visie</h3>
+                    <p class="mb-4">Bij Vonk Systems geloven we dat kunstmatige intelligentie een krachtig hulpmiddel kan zijn voor de publieke sector, mits op een verantwoorde manier ingezet. Wij ontwikkelen daarom AI-oplossingen die voldoen aan de hoogste eisen op het gebied van privacy, beveiliging en transparantie.</p>
+                    <p>Onze oplossingen zijn specifiek ontworpen voor de Nederlandse context, met aandacht voor lokale wet- en regelgeving en de unieke uitdagingen van gemeenten en andere overheidsorganisaties.</p>
+                </div>
+                <div class="bg-white rounded-lg p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-primary">Onze partners</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
+                        <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-center h-20">
+                            <span class="font-bold">Gemeente Amsterdam</span>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-center h-20">
+                            <span class="font-bold">VNG</span>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-center h-20">
+                            <span class="font-bold">SURF</span>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-center h-20">
+                            <span class="font-bold">NCSC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Contact</h2>
+                    <p class="text-lg">Neem contact met ons op voor meer informatie over onze oplossingen</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-primary">Onze gegevens</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                                <div>
+                                    <p class="font-medium">Telefoon</p>
+                                    <p class="text-gray-600">+31 (0)20 123 4567</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <div>
+                                    <p class="font-medium">E-mail</p>
+                                    <p class="text-gray-600">info@vonksystems.nl</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <div>
+                                    <p class="font-medium">Adres</p>
+                                    <p class="text-gray-600">Keizersgracht 123<br>1015 CJ Amsterdam</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-primary">Stuur ons een bericht</h3>
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-1">Naam *</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition duration-300">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-1">E-mailadres *</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition duration-300">
+                            </div>
+                            <div>
+                                <label for="organization" class="block text-sm font-medium mb-1">Organisatie</label>
+                                <input type="text" id="organization" name="organization" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition duration-300">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-1">Bericht *</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition duration-300"></textarea>
+                            </div>
+                            <div class="pt-2">
+                                <button type="submit" class="bg-primary text-white font-medium py-3 px-6 rounded-lg hover:bg-secondary transition duration-300">Versturen</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="#00BAB5"/>
+                        <path d="M25.5 15.5C25.5 18.2614 23.2614 20.5 20.5 20.5C17.7386 20.5 15.5 18.2614 15.5 15.5C15.5 12.7386 17.7386 10.5 20.5 10.5C23.2614 10.5 25.5 12.7386 25.5 15.5Z" fill="white"/>
+                        <path d="M29.5 24.5C29.5 27.2614 27.2614 29.5 24.5 29.5C21.7386 29.5 19.5 27.2614 19.5 24.5C19.5 21.7386 21.7386 19.5 24.5 19.5C27.2614 19.5 29.5 21.7386 29.5 24.5Z" fill="white"/>
+                        <path d="M15.5 24.5C15.5 27.2614 13.2614 29.5 10.5 29.5C7.73858 29.5 5.5 27.2614 5.5 24.5C5.5 21.7386 7.73858 19.5 10.5 19.5C13.2614 19.5 15.5 21.7386 15.5 24.5Z" fill="white"/>
+                    </svg>
+                    <span class="ml-3 text-xl font-bold">Vonk Systems</span>
+                </div>
+                <div class="text-sm text-gray-300 text-center md:text-right">
+                    <p>© 2023 Vonk Systems B.V. Alle rechten voorbehouden.</p>
+                    <p class="mt-1">KvK-nummer: 12345678 | BTW-nummer: NL123456789B01</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Update active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', function() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active-nav');
+                }
+            });
+        });
+
+        // Simple form handling (would need backend in production)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            // In a real implementation, you would send this data to your server
+            alert(`Bedankt voor uw bericht, ${name}! We nemen zo snel mogelijk contact met u op via ${email}.`);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
